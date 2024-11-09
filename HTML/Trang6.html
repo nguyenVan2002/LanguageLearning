@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Trang3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Panel: Avatar and Progress History -->
+        <div class="left-panel">
+            <img src="../IMAGE/boy.png" alt="Avatar">
+            <h3>Alex</h3>
+            <p>Introducing Ourselves</p>
+            <p>Practice introducing yourself and learning about Alex</p>
+        </div>
+
+        <!-- Middle Section: Chatbox -->
+        <div class="chat-section">
+            <div class="chat-box" id="chatBox">
+                <div class="message" id="chatbox-messages"></div>
+                 <!-- Tin nhắn sẽ hiển thị ở đây -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Write your message here...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Translate, Hint, Saved -->
+        <div class="right-panel">
+            <button>Google Translate</button>
+            <button>Hint</button>
+            <button>Saved</button>
+        </div>
+    </div>
+
+    <script src="../JS/trang3.js"></script>
+    <script src="../JS/app.js"></script>
+</body>
+</html>

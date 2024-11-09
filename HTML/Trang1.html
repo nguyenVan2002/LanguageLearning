@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Trang1.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Trang1</title>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1> What's your English level? </h1>
+        <button id= "button1" class="button button1"> 🌱 Beginner</button>
+        <button id= "button2" class="button button2"> ☘️ Intermediate</button>
+        <button id= "button3" class="button button3"> 🌿 Advanced</button>
+
+    </div>
+
+    <script src="../JS/trang1.js"></script>  
+    <script src="../JS/app.js"></script>
+    
+
+</body>
+</html>

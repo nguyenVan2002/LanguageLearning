@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/choosePractice.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>How do you like to practice?</h1>
+        <div class="button-column">
+        
+            <button class="icon-button" id="AIChatButton">
+                <img src="../IMAGE/chatbot.png" alt="AI Chat" class="icon">
+                <span>Speaking and coversation skills</span>
+            </button>
+            <button class="icon-button" id="vocabularyButton">
+                <img src="../IMAGE/speak.png" alt="vocabulary" class="icon">
+                <span>Vocabulary and experssions</span>
+            </button>
+            <button class="icon-button" id="listenButton">
+                <img src="../IMAGE/ear.png" alt="listen" class="icon">
+                <span>Listening and comprehension</span>
+            </button>
+            <button class="icon-button" id="readingButton">
+                <img src="../IMAGE/book.png" alt="reading" class="icon">
+                <span>Reading and writing abilities</span>
+            </button>
+            <button class="icon-button" id="grammarButton">
+                <img src="../IMAGE/grammar.png" alt="grammar" class="icon">
+                <span>Grammar and sentence structure</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="../JS/choosePractice.js"></script>
+</body>
+</html>

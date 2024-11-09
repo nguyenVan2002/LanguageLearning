@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        /* Header Styling */
+.header {
+    background-color: rgb(169, 203, 101); 
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần header */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    position: relative; /* Đặt phần tử tham chiếu cho dropdown */
+    top: 0; /* Nằm ở vị trí trên cùng */
+    left: 0; /* Bắt đầu từ lề trái */
+    z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    border-bottom: 2px solid #ccc; /* Đường viền phía dưới header */ 
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 60px; /* Điều chỉnh kích thước của logo */
+    width: auto;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi rê chuột vào logo */
+}
+
+/* Định dạng cho danh sách điều hướng */
+.nav-menu {
+    list-style: none; /* Bỏ dấu chấm trước các mục */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hiển thị các mục trên cùng một hàng */
+    flex-grow: 1; 
+}
+
+/* Định dạng cho các mục trong thanh điều hướng */
+.nav-menu li {
+    margin-left: 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Định dạng cho các liên kết trong menu */
+.nav-menu li a {
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    color: white; /* Màu chữ của liên kết */
+    font-size: 1.2em; /* Kích thước chữ */
+    font-weight: bold; /* Tăng độ đậm cho chữ */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+    cursor: pointer; /* Hiển thị con trỏ tay khi di chuột lên menu */
+}
+
+/* Hiệu ứng hover khi người dùng di chuột vào liên kết */
+.nav-menu li a:hover {
+    background-color: #4CAF50; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+.active {
+    background-color: #4CAF50; /* Màu nền cho tab đang hoạt động */
+}
+
+/* Định dạng thanh menu bên phải */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.username {
+    cursor: pointer;
+    font-size: 18px;
+    font-style: italic;
+    color: aliceblue;
+    padding-right: 15px;  /* Khoảng trống cho mũi tên */
+    position: relative;
+}
+
+.username::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+#toggleMenu {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styling for the Hidden Menu */
+.menu {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng </span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src ="../JS/menuan.js"></script>
+        
+</body>
+</html>

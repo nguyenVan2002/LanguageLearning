@@ -1,0 +1,249 @@
+body {
+    margin: 0;                       /* Bỏ margin mặc định */
+    padding: 0;                      /* Bỏ padding mặc định */
+    font-family: Arial, sans-serif;  /* Thiết lập font chữ cho toàn trang */
+}
+/* Header section with logo and navigation menu */
+/* Định dạng cho header */
+.header {
+    background-color: rgb(169, 203, 101); 
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần header */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    position: relative; /* Đặt phần tử tham chiếu cho dropdown */
+    top: 0; /* Nằm ở vị trí trên cùng */
+    left: 0; /* Bắt đầu từ lề trái */
+    z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    border-bottom: 2px solid #ccc; /* Đường viền phía dưới header */ 
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 60px; /* Điều chỉnh kích thước của logo */
+    width: auto;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi rê chuột vào logo */
+}
+
+/* Định dạng cho danh sách điều hướng */
+.nav-menu {
+    list-style: none; /* Bỏ dấu chấm trước các mục */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hiển thị các mục trên cùng một hàng */
+    flex-grow: 1; 
+}
+
+/* Định dạng cho các mục trong thanh điều hướng */
+.nav-menu li {
+    margin-left: 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Định dạng cho các liên kết trong menu */
+.nav-menu li a {
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    color: white; /* Màu chữ của liên kết */
+    font-size: 1.2em; /* Kích thước chữ */
+    font-weight: bold; /* Tăng độ đậm cho chữ */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+    cursor: pointer; /* Hiển thị con trỏ tay khi di chuột lên menu */
+}
+
+/* Hiệu ứng hover khi người dùng di chuột vào liên kết */
+.nav-menu li a:hover {
+    background-color: #4CAF50; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+.active {
+    background-color: #4CAF50; /* Màu nền cho tab đang hoạt động */
+}
+
+/* Định dạng thanh menu bên phải */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.username {
+    cursor: pointer;
+    font-size: 18px;
+    font-style: italic;
+    color: aliceblue;
+    padding-right: 15px;  /* Khoảng trống cho mũi tên */
+    position: relative;
+}
+
+.username::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+#toggleMenu {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styling for the Hidden Menu */
+.menu {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #e0e0e0; /* Thêm đường gạch ngăn cách phía trên */
+}
+.menu li:first-child {
+    border-top: none; /* Xóa đường gạch ngăn cách của mục đầu tiên */
+}
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: white;
+}
+/* Main container for left menu and content */
+.main-container {
+    display: flex;
+    margin-top: 100px; /* To avoid content hiding behind the fixed header */
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+/* Left menu (sidebar) */
+.left-menu {
+    display: grid; /* Chuyển sang lưới giống như cột bên phải */
+    grid-template-columns: 1fr; /* Mỗi dòng chứa 1 mục */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Chiều cao tối thiểu là 100% chiều cao viewport */
+    position: relative;
+}
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Đảm bảo không có khoảng cách xung quanh */
+}
+
+.left-menu ul li {
+    margin-bottom: 20px; /* Loại bỏ khoảng cách giữa các mục để sử dụng khoảng cách từ grid */
+}
+
+.left-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.left-menu ul li a:hover {
+    background-color: #e0f7fa; /* Thay đổi màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-menu ul li a .menu-icon {
+    margin-right: 10px;
+}
+
+/* Content section */
+.content {
+    flex: 1;
+    padding: 0px;
+    padding-left: 20px;
+}
+
+
+
+.content-column {
+    display: grid;
+    grid-template-columns: 1fr; /* Mỗi dòng sẽ chỉ chứa 1 thẻ card */
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Thẻ card nằm cùng dòng */
+    gap: 20px;
+}
+
+.card {
+    text-decoration: none;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    width: 100%; /* Thẻ có chiều dài mặc định đầy đủ */
+    height: 70%; /* Thẻ có chiều cao mặc định 70% */
+    
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa; /* Thay đổi màu nền khi hover */
+}
+
+
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.text-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="../CSS/Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>Contact</title>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <!-- Bên trái -->
+        <div class="left-section">
+            <!-- Thẻ div để chứa bản đồ -->
+            <div id="map"></div>
+        </div>    
+    
+        <!--Bên phải-->
+        <div class="feedback-container">
+            <div class="feedback">
+                <h2>Gửi Phản Hồi</h2>
+                <form id="feedback-form">
+                    <label for="name">Tên của bạn:</label>
+                    <input type="text" id="name" name="name" required placeholder="Nhập tên của bạn">
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Nhập email của bạn">
+    
+                    <label for="message">Phản hồi của bạn:</label>
+                    <textarea id="message" name="message" required placeholder="Nhập phản hồi của bạn" rows="4"></textarea>
+    
+                    <button type="submit">Gửi Phản Hồi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <!-- Phần tiêu đề "Thông tin liên hệ" bên trái -->
+        <div class="title-section">
+            <img class="title-img" src="../IMAGE/fast-forward.png" alt="arrow">
+            <h2 class="footer-title">Thông tin liên hệ</h2>
+        </div>
+        
+        
+        <!-- Phần thông tin liên hệ ở giữa -->
+        <div class="contact-info">
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/location.png" alt="address"> 
+                    <span>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TP.HCM.</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/hotline.png" alt="hotline"> 
+                    <span>0123 456 789</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/printer.png "alt="fax"> 
+                    <span>0123 789 456</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/email.png" alt="email"> 
+                    <span>khoahocmaytinh@gmail.com</span>
+                </div>
+        </div>
+        
+        <div class="social-media-app-buttons">
+            <!-- Phần social media bên trái -->
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Phần app buttons ở bên trái -->
+            <div class="app-buttons">
+                    <button class="app-store-btn">
+                        <img src="../IMAGE/appstore.png" alt="Download on the App Store" class="avatar">
+                        <div class="text-content">
+                            <span class="download-text">Download on the</span>
+                            <span class="app-store-text">App Store</span>
+                        </div>
+                    </button>
+                
+                    <button class="google-play-btn">
+                        <img src="../IMAGE/googleplay.png" alt="Get it on Google Play" class="avatar">
+                        <div class="text-content">
+                            <span class="download-text">Get it on</span>
+                            <span class="app-store-text">Google Play</span>
+                        </div>
+                    </button>        
+            </div>
+        </div>    
+        
+        <p class="copyright">&copy; 2024 Trường Đại học Công Nghiệp Thành phố Hồ Chí Minh. All Rights Reserved.</p>
+    </div>
+    
+    
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../JS/map.js"></script>
+    <script src="../JS/app.js"></script>
+    <script src="../JS/contact.js"></script>
+    
+
+</body>
+</html>

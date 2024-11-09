@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Bỏ margin mặc định */
+    align-items: flex-start; /* Căn chỉnh các phần tử ở phía trên cùng */
+}
+
+.header {
+    background-color: rgb(169, 203, 101); 
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần header */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    position: relative; /* Đặt phần tử tham chiếu cho dropdown */
+    top: 0; /* Nằm ở vị trí trên cùng */
+    left: 0; /* Bắt đầu từ lề trái */
+    z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    border-bottom: 2px solid #ccc; /* Đường viền phía dưới header */ 
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 60px; /* Điều chỉnh kích thước của logo */
+    width: auto;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay khi rê chuột vào logo */
+}
+
+/* Định dạng cho danh sách điều hướng */
+.nav-menu {
+    list-style: none; /* Bỏ dấu chấm trước các mục */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hiển thị các mục trên cùng một hàng */
+    flex-grow: 1; 
+}
+
+/* Định dạng cho các mục trong thanh điều hướng */
+.nav-menu li {
+    margin-left: 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Định dạng cho các liên kết trong menu */
+.nav-menu li a {
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    color: white; /* Màu chữ của liên kết */
+    font-size: 1.2em; /* Kích thước chữ */
+    font-weight: bold; /* Tăng độ đậm cho chữ */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+    cursor: pointer; /* Hiển thị con trỏ tay khi di chuột lên menu */
+}
+
+/* Hiệu ứng hover khi người dùng di chuột vào liên kết */
+.nav-menu li a:hover {
+    background-color: #4CAF50; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+.active {
+    background-color: #4CAF50; /* Màu nền cho tab đang hoạt động */
+}
+
+/* Định dạng thanh menu bên phải */
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.username {
+    cursor: pointer;
+    font-size: 18px;
+    font-style: italic;
+    color: aliceblue;
+    padding-right: 15px;  /* Khoảng trống cho mũi tên */
+    position: relative;
+}
+
+.username::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+#toggleMenu {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Styling for the Hidden Menu */
+.menu {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu li {
+    padding: 10px;
+    text-align: left;
+    border-top: 1px solid #e0e0e0; /* Thêm đường gạch ngăn cách phía trên */
+}
+.menu li:first-child {
+    border-top: none; /* Xóa đường gạch ngăn cách của mục đầu tiên */
+}
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: white;
+}
+.container {
+    display: flex; /* Sử dụng flexbox cho container */
+    flex-direction: row; /* Sắp xếp theo hàng ngang */
+    align-items: flex-start; /* Căn chỉnh theo chiều cao bắt đầu từ trên cùng */
+    flex-grow: 1; /* Cho phép container lớn hơn khi có nhiều nội dung */
+    padding: 100px 0 0 20px;
+}
+
+.left-section {
+    display: flex; /* Sử dụng flexbox để sắp xếp map và info */
+    flex-direction: column; /* Sắp xếp các phần tử con theo chiều dọc */
+    margin-right: 20px; /* Khoảng cách giữa phần bên trái và feedback bên phải */
+}
+
+#map {
+    height: 400px; /* Chiều cao bản đồ */
+    width: 600px; /* Chiều rộng bản đồ */
+    margin-right: 20px; /* Khoảng cách giữa bản đồ và thông tin bên phải */
+    }
+
+
+.info {
+    padding: 10px; /* Khoảng cách bên trong cho info */
+    border-radius: 5px; /* Đường viền bo tròn */
+}
+
+.info h2 {
+    margin: 0 0 10px 0; /* Khoảng cách cho tiêu đề */
+}
+
+.info p {
+    margin: 5px 0; /* Khoảng cách giữa các dòng thông tin */
+}
+
+.contact-item {
+    display: flex; /* Sử dụng flexbox cho từng mục */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+.avatar {
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    margin-right: 8px; /* Khoảng cách giữa hình ảnh và văn bản */
+    object-fit: cover; /* Đảm bảo hình ảnh giữ nguyên tỷ lệ */
+    
+}
+.info h2{
+    margin-bottom: 10px; /* Khoảng cách cho tiêu đề */
+    text-align: left;
+}
+
+.feedback-container {
+    background: white; /* Màu nền của form */
+    border-radius: 10px; /* Đường viền bo tròn */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+    padding: 0 20px 20px 20px; /* Khoảng cách bên trong form */
+    width: 500px; 
+   
+}
+
+h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+label {
+    margin-top: 10px; /* Khoảng cách trên cho nhãn */
+    display: block; /* Đặt nhãn trên một dòng riêng */
+}
+
+input, textarea {
+    width: 100%; /* Chiều rộng 100% cho các ô nhập */
+    padding: 10px 0 10px 5px; /* Khoảng cách bên trong */
+    margin-top: 5px; /* Khoảng cách trên cho ô nhập */
+    margin-bottom: 15px; /* Khoảng cách dưới cho ô nhập */
+    border: 1px solid #ddd; /* Đường viền cho ô nhập */
+    border-radius: 5px; /* Đường viền bo tròn */
+}
+
+button {
+    padding: 10px; /* Khoảng cách bên trong cho nút */
+    background-color: #4CAF50; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    border-radius: 5px; /* Đường viền bo tròn */
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay */
+    width: 100%; /* Chiều rộng 100% cho nút */
+}
+
+button:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
+.footer {
+    width: 100%; /* Đảm bảo footer chiếm toàn bộ chiều rộng */
+    display: flex; /* Sử dụng flexbox để bố trí các phần tử */
+    justify-content: flex-start; /* Căn chỉnh các phần tử với khoảng cách đều */
+    padding: 10px; /* Khoảng cách bên trong footer */
+    background-color: navajowhite; /* Màu nền của footer */
+    border-top: 2px solid #ccc; /* Đường viền phía trên footer */
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ không gian */
+    padding-bottom: 0;
+}
+
+.title-section {
+    display: flex; /* Sắp xếp hình ảnh và tiêu đề bên cạnh nhau */
+    padding-right: 5%;
+}
+.title-section h2 {
+    margin: 0; /* Bỏ khoảng cách cho tiêu đề */
+}
+
+.title-img {
+    width: 30px; /* Kích thước hình ảnh tiêu đề */
+    height: 30px;
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và tiêu đề */
+}
+
+.contact-info {
+    display: flex; /* Sắp xếp các mục thông tin liên hệ theo hàng */
+    flex-direction: column; /* Đặt các mục theo chiều dọc */
+}
+
+.contact-item {
+    display: flex; /* Sắp xếp hình ảnh và văn bản bên cạnh nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+
+.avatar {
+    width: 20px; /* Kích thước hình ảnh đại diện */
+    margin-right: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+}
+
+.app-buttons {
+    display: flex; /* Sắp xếp các nút ứng dụng theo hàng */
+    gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+.app-store-btn, .google-play-btn {
+    width: 160px;
+    height: 60px;
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.app-store-btn:hover, .google-play-btn:hover {
+    transform: scale(1.05);
+    background-color: #4eec51; /* Thay đổi màu khi hover */
+}
+.social-media-app-buttons {
+    display: flex; /* Sử dụng flexbox cho phần social media và app buttons */
+    flex-direction: column; /* Đặt chiều dọc cho phần tử này */
+    align-items: center; /* Căn giữa các phần tử con */
+    padding-left: 5%;
+}
+
+.social-media {
+    display: flex; /* Sắp xếp các biểu tượng mạng xã hội theo hàng */
+    gap: 30px; /* Khoảng cách giữa các biểu tượng */
+    padding-bottom: 10px;
+}
+
+.social-media a {
+    color: #3b5998; /* Màu mặc định của các biểu tượng */
+    font-size: 24px; /* Kích thước biểu tượng */
+}
+
+.copyright {
+    text-align: center; /* Căn giữa văn bản bản quyền */
+    width: 100%; /* Đảm bảo copyright chiếm toàn bộ chiều rộng */
+    margin-top: 20px; /* Khoảng cách phía trên văn bản bản quyền */
+    color: black;
+}
+.text-content {
+    display: flex; /* Sử dụng flexbox cho nội dung */
+    flex-direction: column; /* Đặt chiều dọc cho nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+}
+.download-text {
+    font-size: 14px; /* Kích thước nhỏ hơn */
+}
+
+.app-store-text {
+    font-size: 18px; /* Kích thước lớn hơn */
+    font-weight: bold; /* Để nhấn mạnh */
+}
+

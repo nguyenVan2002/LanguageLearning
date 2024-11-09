@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/blog.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">   
+    <title>Blog</title>
+</head>
+<body>
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-container">
+
+        <div class="shapes">
+            <div class="left-side">
+                <img class="avatar-shapes" src="../IMAGE/hello-chatbot.avif" alt="">
+                <h1>Chat Talk Blog</h1>
+            </div>
+            
+            <div class="right-side">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+            </div>
+        </div>
+
+        <div class="blog-posts">
+            <div class="blog-post" id = "blog1">
+                <img src="../IMAGE/hoc-tu-vung-hieu-qua.png" alt="Học từ vựng" class="post-image">
+                <h2>Cách Học Từ Vựng Hiệu Quả</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn cách học từ vựng một cách hiệu quả nhất...</p>
+            </div>
+
+            <div class="blog-post" id = "blog2">
+                <img src="../IMAGE/listening-skills.jpg" alt="Kỹ năng nghe" class="post-image">
+                <h2>Cải Thiện Kỹ Năng Nghe</h2>
+                <p>Tìm hiểu những phương pháp giúp bạn cải thiện kỹ năng nghe tiếng Anh...</p>
+            </div>
+
+            <div class="blog-post" id = "blog3">
+                <img src="../IMAGE/nho-tu-nhanh.jpg" alt="Nhớ từ nhanh" class="post-image">
+                <h2>Mẹo ghi nhớ từ nhanh</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+                <a href="#" class="read-more">Đọc thêm</a>
+            </div>
+
+            <div class="blog-post" id = "blog4">
+                <img src="../IMAGE/phat-am-chuan.jpeg" alt="Phát âm chuẩn" class="post-image">
+                <h2>Phát âm chuẩn như người bản địa</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <div class="blog-post" id = "blog5">
+                <img src="../IMAGE/loi-sai-thuong-gap.png" alt="Lỗi sai thường gặp" class="post-image">
+                <h2>Những lỗi sai thường gặp</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <div class="blog-post" id = "blog6">
+                <img src="../IMAGE/i-can-do-it.jpg" alt="Thói quen học hiệu quả" class="post-image">
+                <h2>Tạo thói quen học hiệu quả</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <div class="blog-post" id = "blog7">
+                <img src="../IMAGE/cach-chon-sach-hoc-tieng-anh.png" alt="sách học tiếng anh" class="post-image">
+                <h2>Các cuốn sách hữu ích</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <div class="blog-post" id = "blog8">
+                <img src="../IMAGE/histry-english.jpg" alt="Lịch sử phát triển" class="post-image">
+                <h2>Lịch sử và sự phát triển của ngôn ngữ </h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <div class="blog-post" id = "blog9">
+                <img src="../IMAGE/tu-vung-theo-chu-de.jpg" alt="Học từ vựng theo chủ đề" class="post-image">
+                <h2>Từ vựng theo chủ đề</h2>
+                <p>Bài viết này sẽ hướng dẫn bạn những mẹo có thể ghi nhớ từ vựng trong 5 phút...</p>
+            </div>
+
+            <!-- Thêm các bài viết khác ở đây -->
+
+            <button class="see-more">Đọc thêm</button>
+
+        </div>     
+    </div>
+
+    <div class="footer">
+        <!-- Phần tiêu đề "Thông tin liên hệ" bên trái -->
+        <div class="title-section">
+            <img class="title-img" src="../IMAGE/fast-forward.png" alt="arrow">
+            <h2 class="footer-title">Thông tin liên hệ</h2>
+        </div>
+        
+        
+        <!-- Phần thông tin liên hệ ở giữa -->
+        <div class="contact-info">
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/location.png" alt="address"> 
+                    <span>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TP.HCM.</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/hotline.png" alt="hotline"> 
+                    <span>0123 456 789</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/email.png" alt="fax"> 
+                    <span>0123 789 456</span>
+                </div>
+                <div class="contact-item">
+                    <img class="avatar" src="../IMAGE/email.png" alt="email"> 
+                    <span>khoahocmaytinh@gmail.com</span>
+                </div>
+        </div>
+        
+        <div class="social-media-app-buttons">
+            <!-- Phần social media bên trái -->
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Phần app buttons ở bên trái -->
+            <div class="app-buttons">
+                    <button class="app-store-btn">
+                        <img src="../IMAGE/appstore.png" alt="Download on the App Store" class="avatar">
+                        <div class="text-content">
+                            <span class="download-text">Download on the</span>
+                            <span class="app-store-text">App Store</span>
+                        </div>
+                    </button>
+                
+                    <button class="google-play-btn">
+                        <img src="../IMAGE/googleplay.png" alt="Get it on Google Play" class="avatar">
+                        <div class="text-content">
+                            <span class="download-text">Get it on</span>
+                            <span class="app-store-text">Google Play</span>
+                        </div>
+                    </button>        
+            </div>
+        </div>    
+        
+        <p class="copyright">&copy; 2024 Trường Đại học Công Nghiệp Thành phố Hồ Chí Minh. All Rights Reserved.</p>
+    </div>
+
+
+    <script src="../JS/blog.js"></script>
+</body>
+</html>

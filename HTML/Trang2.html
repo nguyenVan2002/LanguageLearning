@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/test.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+
+    <title>Trang2</title>
+</head>
+<body>
+
+    <div class="header">
+        <!--menu bên trái-->  
+        <img class="logo" id="logo" src="../IMAGE/talk.jpg" alt="logo">
+        <ul class="nav-menu">
+            <li><a id="home"> HOME </a></li>
+            <li><a id="blog"> BLOG </a></li>
+            <li><a id="contact"> CONTACT </a></li>
+            <li><a id="login"> LOGIN </a></li>
+        </ul>
+    
+        <!--user bên phải-->
+        <div id="dp_menu" class="navbar">
+            <img class="user-icon" src="../IMAGE/user-icon.png" alt="user icon">
+            <span id="toggleMenu" class="username">Người dùng</span>
+            <div id="hiddenMenu" class="menu">
+                <ul>
+                    <li><a href="#">Thông tin cá nhân</a></li>
+                    <li><a href="#">Đổi mật khẩu</a></li>
+                    <li><a href="#">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main section with left menu and content -->
+    <div class="main-container">
+        <!-- Left sidebar menu -->
+        <div class="left-menu">
+            <ul>
+                <li><a href="chat.html">
+                    <span class="menu-icon">💬</span>
+                    <span>Chat</span>
+                </a></li>
+                <li><a href="ai-characters.html">
+                    <span class="menu-icon">🤖</span>
+                    <span>AI Characters</span>
+                </a></li>
+                <li><a href="lesson.html">
+                    <span class="menu-icon">📚</span>
+                    <span>Lesson</span>
+                </a></li>
+                <li><a href="progress.html">
+                    <span class="menu-icon">📈</span>
+                    <span>Progress</span>
+                </a></li>
+            </ul>
+        </div>
+    
+        <!-- Right content area -->
+        <div class="content">
+            <div class="content-column">
+                <button class="card" id="alex-button">
+                    <img src="../IMAGE/face.png" alt="Alex" class="avatar">
+                    <div class="text-content">
+                        <h3>Alex</h3>
+                        <p>Introducing Ourselves</p>
+                    </div>
+                </button>
+                <button class="card" id="elena-button">
+                    <img src="../IMAGE/cosplayer.png" alt="Elena" class="avatar">
+                    <div class="text-content">
+                        <h3>Elena</h3>
+                        <p>Talking About Origins</p>
+                    </div>
+                </button>
+                <button class="card" id="sam-button">
+                    <img src="../IMAGE/boy.png" alt="Sam" class="avatar">
+                    <div class="text-content">
+                        <h3>Sam</h3>
+                        <p>How Are You?</p>
+                    </div>
+                </button>
+                <button class="card" id="mia-button">
+                    <img src="../IMAGE/otaku.png" alt="Mia" class="avatar">
+                    <div class="text-content">
+                        <h3>Mia</h3>
+                        <p>What Time Is It?</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+    
+    <script src="../JS/trang2.js"></script>
+    <script src="../JS/app.js"></script>
+       
+
+</body>
+</html>

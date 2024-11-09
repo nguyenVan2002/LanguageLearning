@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Màu nền */
+    display: flex; /* Sử dụng flexbox cho body */
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Đặt body là relative để header có thể điều chỉnh vị trí */
+}
+
+.header {
+    background-color: rgb(169, 203, 101); 
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần header */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    position: absolute; /* Đặt header cố định lên trên cùng */
+    top: 0; /* Nằm ở vị trí trên cùng */
+    left: 0; /* Bắt đầu từ lề trái */
+    position: fixed;
+}
+
+.logo {
+    height: 80px; /* Điều chỉnh kích thước của logo */
+    width: auto;
+}
+
+.login-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 300px; /* Chiều rộng của form */
+    margin: 100px auto; /* Tạo khoảng cách với phần header */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #4CAF50; /* Màu nút */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #45a049; /* Màu nút khi hover */
+}
+
+.login-form p {
+    text-align: center;
+}
+
+.login-form a {
+    text-decoration: none;
+    color: #2575fc; /* Màu chữ */
+}

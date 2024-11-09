@@ -1,0 +1,157 @@
+/* Định dạng chung cho body */
+body {
+    margin: 0;                       /* Bỏ margin mặc định */
+    padding: 0;                      /* Bỏ padding mặc định */
+    font-family: Arial, sans-serif;  /* Font chữ chung */
+}
+
+.header {
+    background-color: rgb(169, 203, 101); 
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+    justify-content: space-between; /* Căn giữa logo và menu điều hướng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần header */
+}
+
+/* Định dạng cho logo */
+.logo {
+    height: 80px; /* Điều chỉnh kích thước của logo */
+    width: auto;
+    cursor: pointer; /* Hiển thị con trỏ tay khi di chuột lên logo */
+}
+
+/* Định dạng cho danh sách điều hướng */
+.nav-menu {
+    list-style: none; /* Bỏ dấu chấm trước các mục */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hiển thị các mục trên cùng một hàng */
+    justify-content: flex-start; 
+    flex-grow: 1; 
+}
+
+/* Định dạng cho các mục trong thanh điều hướng */
+.nav-menu li {
+    margin-left: 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Định dạng cho các liên kết trong menu */
+.nav-menu li a {
+    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    color: white; /* Màu chữ của liên kết */
+    font-size: 1.2em; /* Kích thước chữ */
+    font-weight: bold; /* Tăng độ đậm cho chữ */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover khi người dùng di chuột vào liên kết */
+.nav-menu li a:hover {
+    background-color: #555; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
+
+/* Định dạng cho main-container */
+.main-container {
+    display: flex;                   /* Sử dụng flexbox cho main-container */
+    margin-top: 20px;               /* Khoảng cách giữa header và main-container */
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* Định dạng cho menu bên trái */
+.left-menu {
+    width: 200px;                   /* Đặt chiều rộng cho menu bên trái */
+    padding: 10px;                  /* Khoảng cách bên trong */
+    background-color: #f9f9f9;      /* Màu nền cho menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho menu */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Đảm bảo không có khoảng cách xung quanh */
+}
+
+.left-menu ul li {
+    margin-bottom: 20px; /* Loại bỏ khoảng cách giữa các mục để sử dụng khoảng cách từ grid */
+}
+
+.left-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.left-menu ul li a:hover {
+    background-color: #e0f7fa; /* Thay đổi màu nền khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-menu ul li a .menu-icon {
+    margin-right: 10px;
+}
+
+/* Định dạng cho phần nội dung */
+.content {
+    flex: 1;                        /* Chiếm phần còn lại của main-container */
+    margin-left: 20px;                  /* Khoảng cách bên trong */
+}
+
+/* Định dạng cho các thẻ card */
+.card {
+    display: flex;                 /* Hiển thị như block để bao quanh nội dung */
+    text-decoration: none;          /* Bỏ gạch chân cho liên kết */
+    color: #333;                    /* Màu chữ */
+    margin: 10px 0;                /* Khoảng cách giữa các thẻ card */
+    padding: 15px;                  /* Khoảng cách bên trong cho thẻ card */
+    border: 1px solid #ddd;         /* Đường viền cho thẻ card */
+    border-radius: 5px;             /* Bo góc cho thẻ card */
+    transition: transform 0.3s;     /* Hiệu ứng chuyển khi hover */
+    width: 100%;                /* Đặt chiều rộng cho thẻ card */
+    
+}
+
+/* Định dạng khi hover (di chuột qua) trên thẻ card */
+.card:hover {
+    transform: translateY(-5px);    /* Di chuyển thẻ card lên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa; /* Thay đổi màu nền khi hover */
+}
+
+/* Định dạng cho avatar trong thẻ card */
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    flex-shrink: 0;                 /* Không co giãn avatar */
+    margin-right: 20px;              /* Khoảng cách giữa avatar và nội dung văn bản */
+}
+
+/* Định dạng cho nội dung văn bản trong thẻ card */
+.text-content {
+    margin-top: 10px;              /* Khoảng cách giữa hình ảnh và nội dung văn bản */
+    justify-content: center;
+}
+.text-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 14px;
+    color: #666;
+}

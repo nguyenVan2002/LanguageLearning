@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Chuyển thành cột khi trên thiết bị nhỏ */
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Hiển thị các mục theo dạng dọc */
+        width: 100%; /* Chiếm hết chiều ngang màn hình */
+        padding: 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-menu li a {
+        width: 100%; /* Liên kết chiếm hết chiều ngang */
+        text-align: center; /* Căn giữa nội dung */
+    }
+}
